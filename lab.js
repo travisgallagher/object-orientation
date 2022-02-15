@@ -79,24 +79,6 @@ favoriteThings.book = "Not a huge book fan";
 
 console.log(favoriteThings); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
 // Do not edit the code below.
@@ -114,7 +96,9 @@ var carDetails = {
 
 //Code Here
 
+let { color, make, model, year } = carDetails;
 
+console.log(carDetails); 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -126,13 +110,16 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+
+  let{firstName, lastName, title} = prob7;
+
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
+console.log(greeting);
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -146,7 +133,12 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(prob8) {
+  let {utah, california, texas, arizona} = prob8;
+  return (utah + california + texas + arizona); 
+}; 
 
+console.log(totalPopulation.prob8); 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -159,6 +151,14 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+function ingredients(prob9) {
+  let {carb, fat, protein} = prob9; 
+  return ['carb', 'fat', 'protein']; 
+}; 
+
+console.log(ingredients.prob9); 
+
 
 
 
@@ -182,6 +182,10 @@ var user = {
 
 //Code Here
 
+user.name = "Bryan G. Smith"; 
+user.email = "bryan.smith@devmountain"; 
+
+console.log(user); 
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -189,6 +193,10 @@ var user = {
 */
 
 //Code Here
+
+delete user.age;
+
+console.log(user); 
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -200,7 +208,16 @@ var user = {
 
 //Code here
 
+class Cat {
+  constructor(name, age, color) {
+    this.name = name; 
+    this.age = age; 
+    this.color = color; 
+  };
+}; 
 
+let jinx = new Cat(`Jinx`, 4, 'black & white'); 
+console.log(jinx.name); 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -211,6 +228,23 @@ var user = {
 */
 
 //Code here
+
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name; 
+    this.age = age; 
+    this.favoriteSpell = favoriteSpell; 
+    }
+
+    castSpell () {
+      console. log(`${this.name} has cast ${this.favoriteSpell}`); 
+    }
+}
+
+let Harry = new Wizard(`Harry Potter`, 30, `Expecto Patronum!!!`); 
+
+Harry.castSpell(); 
+
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -237,6 +271,30 @@ var user = {
 
 //Code Here
 
+class Phone {
+  constructor(brand, model, storage, color, price) {
+    this.brand = brand; 
+    this.model = model; 
+    this.storage = storage; 
+    this.color = color; 
+    this.price = price; 
+
+    this.sold = false; 
+  }; 
+
+  sell() {
+    this.sold = true; 
+    console.log(`${this.brand} ${this.model} has been sold.`); 
+  }; 
+
+  changePrice(newPrice) {
+    this.price = newPrice; 
+  }; 
+}; 
+
+let myPhone = new Phone(`Apple`, `Iphone 12`, `128 GB`, `Space grey`, `$1,200`); 
+
+console.log(myPhone);
   
 /*
     Next make three new phone instances using your class.
